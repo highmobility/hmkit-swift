@@ -1,0 +1,979 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 52;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		2012350823BF5A8D001EE01E /* DeviceCertificateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDEA3B20C0120A001480A7 /* DeviceCertificateTests.swift */; };
+		2012350923BF5A9F001EE01E /* AuthenticateCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B8120D24ECB00601727 /* AuthenticateCommandTests.swift */; };
+		2012350A23BF5A9F001EE01E /* AuthenticateDoneCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B8420D2626C00601727 /* AuthenticateDoneCommandTests.swift */; };
+		2012350B23BF5A9F001EE01E /* GetCertificateCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202282B820D3BEAD0013356B /* GetCertificateCommandTests.swift */; };
+		2012350C23BF5A9F001EE01E /* GetDeviceCertificateCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B8820D26B6300601727 /* GetDeviceCertificateCommandTests.swift */; };
+		2012350D23BF5A9F001EE01E /* NonceCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B8620D2691600601727 /* NonceCommandTests.swift */; };
+		2012350E23BF5A9F001EE01E /* RegisterCertificateCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202282B420D3AE8A0013356B /* RegisterCertificateCommandTests.swift */; };
+		2012351023BF5A9F001EE01E /* RevokeCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B9020D2876000601727 /* RevokeCommandTests.swift */; };
+		2012351123BF5A9F001EE01E /* SecureContainerCommandTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 206C5B8A20D2736F00601727 /* SecureContainerCommandTests.swift */; };
+		201951CD22859A49004D144A /* HMTelematicsRequestError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201951CC22859A49004D144A /* HMTelematicsRequestError.swift */; };
+		201951CF22859B1B004D144A /* HMTelematicsAccessCertificateRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201951CE22859B1B004D144A /* HMTelematicsAccessCertificateRequest.swift */; };
+		201951D122859BB4004D144A /* HMTelematicsAccessCertificateResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201951D022859BB4004D144A /* HMTelematicsAccessCertificateResponse.swift */; };
+		201BB37522084C07008BA3D0 /* HMCommandResponseType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37422084C07008BA3D0 /* HMCommandResponseType.swift */; };
+		201BB37722087AA9008BA3D0 /* HMCommandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37622087AA9008BA3D0 /* HMCommandError.swift */; };
+		201BB37922087B40008BA3D0 /* HMCommandResponseFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37822087B40008BA3D0 /* HMCommandResponseFactory.swift */; };
+		201BB37B22087BBC008BA3D0 /* HMCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37A22087BBC008BA3D0 /* HMCommandResponse.swift */; };
+		201BB37D22087E70008BA3D0 /* HMVerifiableCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37C22087E70008BA3D0 /* HMVerifiableCommand.swift */; };
+		201BB37F2209A859008BA3D0 /* HMCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB37E2209A858008BA3D0 /* HMCommandRequest.swift */; };
+		201BB3812209AB11008BA3D0 /* HMCommandRequestFactory.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3802209AB11008BA3D0 /* HMCommandRequestFactory.swift */; };
+		201BB3862209E7F1008BA3D0 /* HMAuthenticateCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3852209E7F1008BA3D0 /* HMAuthenticateCommandRequest.swift */; };
+		201BB3882209E890008BA3D0 /* HMAuthenticateCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3872209E890008BA3D0 /* HMAuthenticateCommandResponse.swift */; };
+		201BB38A2209E908008BA3D0 /* HMAuthenticateDoneCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3892209E908008BA3D0 /* HMAuthenticateDoneCommandRequest.swift */; };
+		201BB38C2209E95D008BA3D0 /* HMAuthenticateDoneCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB38B2209E95D008BA3D0 /* HMAuthenticateDoneCommandResponse.swift */; };
+		201BB3902209EA78008BA3D0 /* HMGetAccessCertificateCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB38F2209EA78008BA3D0 /* HMGetAccessCertificateCommandRequest.swift */; };
+		201BB3922209EABD008BA3D0 /* HMGetAccessCertificateCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3912209EABD008BA3D0 /* HMGetAccessCertificateCommandResponse.swift */; };
+		201BB3942209EB2A008BA3D0 /* HMGetDeviceCertificateCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3932209EB2A008BA3D0 /* HMGetDeviceCertificateCommandRequest.swift */; };
+		201BB3962209EB7F008BA3D0 /* HMGetDeviceCertificateCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3952209EB7F008BA3D0 /* HMGetDeviceCertificateCommandResponse.swift */; };
+		201BB3982209EBB7008BA3D0 /* HMGetNonceCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3972209EBB7008BA3D0 /* HMGetNonceCommandRequest.swift */; };
+		201BB39A2209EBE8008BA3D0 /* HMGetNonceCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3992209EBE8008BA3D0 /* HMGetNonceCommandResponse.swift */; };
+		201BB39C2209EC1D008BA3D0 /* HMRegisterCertificateCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB39B2209EC1D008BA3D0 /* HMRegisterCertificateCommandRequest.swift */; };
+		201BB39E2209EC44008BA3D0 /* HMRegisterCertificateCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB39D2209EC44008BA3D0 /* HMRegisterCertificateCommandResponse.swift */; };
+		201BB3A02209EC95008BA3D0 /* HMRevokeCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB39F2209EC95008BA3D0 /* HMRevokeCommandRequest.swift */; };
+		201BB3A22209ECD8008BA3D0 /* HMRevokeCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3A12209ECD8008BA3D0 /* HMRevokeCommandResponse.swift */; };
+		201BB3A42209ED10008BA3D0 /* HMSecureContainerCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3A32209ED10008BA3D0 /* HMSecureContainerCommandRequest.swift */; };
+		201BB3A62209ED5E008BA3D0 /* HMSecureContainerCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3A52209ED5E008BA3D0 /* HMSecureContainerCommandResponse.swift */; };
+		201BB3A82209F748008BA3D0 /* Data+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3A72209F748008BA3D0 /* Data+Extensions.swift */; };
+		201BB3AA2209F75A008BA3D0 /* Dictionary+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3A92209F75A008BA3D0 /* Dictionary+Extensions.swift */; };
+		201BB3AC2209F76A008BA3D0 /* String+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BB3AB2209F76A008BA3D0 /* String+Extensions.swift */; };
+		201BFD8F21C3E9FD001E1DC1 /* HMActiveSentCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = 201BFD8E21C3E9FD001E1DC1 /* HMActiveSentCommand.swift */; };
+		2024A90B2191EACD00E04169 /* HMLink.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2024A90A2191EACD00E04169 /* HMLink.swift */; };
+		2024FCDA218CA3B700D3EF20 /* HMLocalDevice.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2024FCD9218CA3B700D3EF20 /* HMLocalDevice.swift */; };
+		2026631F220C4477003915F5 /* HMErrorCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2026631E220C4477003915F5 /* HMErrorCommandRequest.swift */; };
+		20266321220C450F003915F5 /* HMErrorCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20266320220C450F003915F5 /* HMErrorCommandResponse.swift */; };
+		2029CDFF2361E24E009B3F19 /* HMTelematicsCommandError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2029CDFE2361E24E009B3F19 /* HMTelematicsCommandError.swift */; };
+		202D52DF22808CD400908EC6 /* HMSecureContainerCommandVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 202D52DE22808CD400908EC6 /* HMSecureContainerCommandVersion.swift */; };
+		20380131224CDED5001A6F96 /* AccessCertificateTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20FDEA3920BFEE7C001480A7 /* AccessCertificateTests.swift */; };
+		203A5CD4219073FD00D90D51 /* HMCharacteristic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CD3219073FD00D90D51 /* HMCharacteristic.swift */; };
+		203A5CD62190751E00D90D51 /* HMBluetooth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CD52190751E00D90D51 /* HMBluetooth.swift */; };
+		203A5CD821907E0D00D90D51 /* HMSerialType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CD721907E0D00D90D51 /* HMSerialType.swift */; };
+		203A5CDA2190816400D90D51 /* HMLocalDeviceConfiguration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CD92190816400D90D51 /* HMLocalDeviceConfiguration.swift */; };
+		203A5CDE2190850D00D90D51 /* HMLocalDeviceState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CDD2190850D00D90D51 /* HMLocalDeviceState.swift */; };
+		203A5CE021908D8700D90D51 /* HMBluetoothError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CDF21908D8700D90D51 /* HMBluetoothError.swift */; };
+		203A5CE421909CD200D90D51 /* HMPeripheralRetryValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 203A5CE321909CD200D90D51 /* HMPeripheralRetryValues.swift */; };
+		2047F33C21BFEAC100B17F61 /* HMLinkDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047F33B21BFEAC100B17F61 /* HMLinkDelegate.swift */; };
+		2047F33E21BFEDA600B17F61 /* HMLocalDeviceDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2047F33D21BFEDA600B17F61 /* HMLocalDeviceDelegate.swift */; };
+		204DBF9122887D78005C02D0 /* HMTelematicsCommandRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBF9022887D78005C02D0 /* HMTelematicsCommandRequest.swift */; };
+		204DBF9322887E0F005C02D0 /* HMTelematicsCommandResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBF9222887E0F005C02D0 /* HMTelematicsCommandResponse.swift */; };
+		204DBF9522887E3C005C02D0 /* HMTelematicsNonceResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBF9422887E3C005C02D0 /* HMTelematicsNonceResponse.swift */; };
+		204DBF9722887E58005C02D0 /* HMTelematicsNonceRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 204DBF9622887E58005C02D0 /* HMTelematicsNonceRequest.swift */; };
+		205C531022A54CDB002F71B1 /* HMTelematicsContainerVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C530F22A54CDB002F71B1 /* HMTelematicsContainerVersion.swift */; };
+		205C531222A54CF2002F71B1 /* HMTelematicsContainer.swift in Sources */ = {isa = PBXBuildFile; fileRef = 205C531122A54CF2002F71B1 /* HMTelematicsContainer.swift */; };
+		206F958123C5FA3400D714AE /* HMUtilities in Frameworks */ = {isa = PBXBuildFile; productRef = 206F958023C5FA3400D714AE /* HMUtilities */; };
+		206F958723C5FBE200D714AE /* HMCryptoKit in Frameworks */ = {isa = PBXBuildFile; productRef = 206F958623C5FBE200D714AE /* HMCryptoKit */; };
+		2070E305221D89820050CE86 /* Date+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2070E304221D89820050CE86 /* Date+Extensions.swift */; };
+		207C6898239939DF00416594 /* HMContainerContentType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207C6897239939DF00416594 /* HMContainerContentType.swift */; };
+		207FE3D0218B2DB900D27D25 /* HMProtocolBytes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207FE3CF218B2DB900D27D25 /* HMProtocolBytes.swift */; };
+		207FE3D2218B2ECD00D27D25 /* HMProtocolError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207FE3D1218B2ECD00D27D25 /* HMProtocolError.swift */; };
+		207FE3D4218B31E300D27D25 /* HMTimeouts.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207FE3D3218B31E300D27D25 /* HMTimeouts.swift */; };
+		207FE3D6218B4A7100D27D25 /* HMParserDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 207FE3D5218B4A7100D27D25 /* HMParserDelegate.swift */; };
+		20B570A42288906A00B91BF7 /* HMTelematicsAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B570A32288906A00B91BF7 /* HMTelematicsAPI.swift */; };
+		20B570A62288908A00B91BF7 /* HMTelematicsResponse.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B570A52288908A00B91BF7 /* HMTelematicsResponse.swift */; };
+		20B570A8228890A400B91BF7 /* HMTelematicsRequest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20B570A7228890A400B91BF7 /* HMTelematicsRequest.swift */; };
+		20C81A5321884D7E00964594 /* HMOAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C81A5221884D7E00964594 /* HMOAuth.swift */; };
+		20CF26FB2289980800431727 /* HMTelematicsCommandStatus.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF26FA2289980800431727 /* HMTelematicsCommandStatus.swift */; };
+		20CF26FD2289BCC000431727 /* HMOAuthFailure.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF26FC2289BCC000431727 /* HMOAuthFailure.swift */; };
+		20CF26FF2289BCD600431727 /* HMOAuthSuccess.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF26FE2289BCD600431727 /* HMOAuthSuccess.swift */; };
+		20CF27012289BCF600431727 /* HMOAuthGrantType.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF27002289BCF600431727 /* HMOAuthGrantType.swift */; };
+		20CF27032289BD0C00431727 /* HMOAuthRequiredValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF27022289BD0C00431727 /* HMOAuthRequiredValues.swift */; };
+		20CF27052289BD1E00431727 /* HMOAuthOptionalValues.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20CF27042289BD1E00431727 /* HMOAuthOptionalValues.swift */; };
+		OBJ_149 /* HMKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = "HMKit::HMKit::Product" /* HMKit.framework */; };
+		OBJ_157 /* HMAccessCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_11 /* HMAccessCertificate.swift */; };
+		OBJ_158 /* HMAccessCertificateVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_12 /* HMAccessCertificateVersion.swift */; };
+		OBJ_159 /* HMDeviceCertificate.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_14 /* HMDeviceCertificate.swift */; };
+		OBJ_160 /* HMDeviceCertificateVersion.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_15 /* HMDeviceCertificateVersion.swift */; };
+		OBJ_161 /* HMBytesAndVersionCodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_17 /* HMBytesAndVersionCodable.swift */; };
+		OBJ_162 /* HMBytesGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_18 /* HMBytesGettable.swift */; };
+		OBJ_163 /* HMSigned.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_19 /* HMSigned.swift */; };
+		OBJ_164 /* HMSimilar.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_20 /* HMSimilar.swift */; };
+		OBJ_165 /* HMVersionVerifiable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_21 /* HMVersionVerifiable.swift */; };
+		OBJ_166 /* HMValueGettable.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_22 /* HMValueGettable.swift */; };
+		OBJ_168 /* HMProtocolCommand.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_26 /* HMProtocolCommand.swift */; };
+		OBJ_193 /* Int+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_54 /* Int+Extensions.swift */; };
+		OBJ_195 /* UInt8+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_56 /* UInt8+Extensions.swift */; };
+		OBJ_197 /* Collection+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_58 /* Collection+Extensions.swift */; };
+		OBJ_198 /* URLRequest+Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_59 /* URLRequest+Extensions.swift */; };
+		OBJ_203 /* HMLinkError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_65 /* HMLinkError.swift */; };
+		OBJ_204 /* HMLinkState.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_66 /* HMLinkState.swift */; };
+		OBJ_207 /* HMLocalDeviceError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_70 /* HMLocalDeviceError.swift */; };
+		OBJ_209 /* HMService.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_73 /* HMService.swift */; };
+		OBJ_210 /* HMKeychainLayer.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_74 /* HMKeychainLayer.swift */; };
+		OBJ_211 /* HMLoggingOptions.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_75 /* HMLoggingOptions.swift */; };
+		OBJ_212 /* HMParser.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_76 /* HMParser.swift */; };
+		OBJ_213 /* HMPeriod.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_77 /* HMPeriod.swift */; };
+		OBJ_215 /* HMSessionKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_79 /* HMSessionKey.swift */; };
+		OBJ_216 /* HMStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_80 /* HMStorage.swift */; };
+		OBJ_219 /* HMTelematics.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_84 /* HMTelematics.swift */; };
+		OBJ_220 /* HMTelematicsError.swift in Sources */ = {isa = PBXBuildFile; fileRef = OBJ_85 /* HMTelematicsError.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		202B42B92056F9D30037B5F5 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = OBJ_1 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = "HMKit::HMKit";
+			remoteInfo = HMKit;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		201951CC22859A49004D144A /* HMTelematicsRequestError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsRequestError.swift; sourceTree = "<group>"; };
+		201951CE22859B1B004D144A /* HMTelematicsAccessCertificateRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsAccessCertificateRequest.swift; sourceTree = "<group>"; };
+		201951D022859BB4004D144A /* HMTelematicsAccessCertificateResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsAccessCertificateResponse.swift; sourceTree = "<group>"; };
+		201BB37422084C07008BA3D0 /* HMCommandResponseType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandResponseType.swift; sourceTree = "<group>"; };
+		201BB37622087AA9008BA3D0 /* HMCommandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandError.swift; sourceTree = "<group>"; };
+		201BB37822087B40008BA3D0 /* HMCommandResponseFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandResponseFactory.swift; sourceTree = "<group>"; };
+		201BB37A22087BBC008BA3D0 /* HMCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandResponse.swift; sourceTree = "<group>"; };
+		201BB37C22087E70008BA3D0 /* HMVerifiableCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMVerifiableCommand.swift; sourceTree = "<group>"; };
+		201BB37E2209A858008BA3D0 /* HMCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3802209AB11008BA3D0 /* HMCommandRequestFactory.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCommandRequestFactory.swift; sourceTree = "<group>"; };
+		201BB3852209E7F1008BA3D0 /* HMAuthenticateCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAuthenticateCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3872209E890008BA3D0 /* HMAuthenticateCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAuthenticateCommandResponse.swift; sourceTree = "<group>"; };
+		201BB3892209E908008BA3D0 /* HMAuthenticateDoneCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAuthenticateDoneCommandRequest.swift; sourceTree = "<group>"; };
+		201BB38B2209E95D008BA3D0 /* HMAuthenticateDoneCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAuthenticateDoneCommandResponse.swift; sourceTree = "<group>"; };
+		201BB38F2209EA78008BA3D0 /* HMGetAccessCertificateCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetAccessCertificateCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3912209EABD008BA3D0 /* HMGetAccessCertificateCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetAccessCertificateCommandResponse.swift; sourceTree = "<group>"; };
+		201BB3932209EB2A008BA3D0 /* HMGetDeviceCertificateCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetDeviceCertificateCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3952209EB7F008BA3D0 /* HMGetDeviceCertificateCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetDeviceCertificateCommandResponse.swift; sourceTree = "<group>"; };
+		201BB3972209EBB7008BA3D0 /* HMGetNonceCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetNonceCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3992209EBE8008BA3D0 /* HMGetNonceCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMGetNonceCommandResponse.swift; sourceTree = "<group>"; };
+		201BB39B2209EC1D008BA3D0 /* HMRegisterCertificateCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRegisterCertificateCommandRequest.swift; sourceTree = "<group>"; };
+		201BB39D2209EC44008BA3D0 /* HMRegisterCertificateCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRegisterCertificateCommandResponse.swift; sourceTree = "<group>"; };
+		201BB39F2209EC95008BA3D0 /* HMRevokeCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRevokeCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3A12209ECD8008BA3D0 /* HMRevokeCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMRevokeCommandResponse.swift; sourceTree = "<group>"; };
+		201BB3A32209ED10008BA3D0 /* HMSecureContainerCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSecureContainerCommandRequest.swift; sourceTree = "<group>"; };
+		201BB3A52209ED5E008BA3D0 /* HMSecureContainerCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSecureContainerCommandResponse.swift; sourceTree = "<group>"; };
+		201BB3A72209F748008BA3D0 /* Data+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Data+Extensions.swift"; sourceTree = "<group>"; };
+		201BB3A92209F75A008BA3D0 /* Dictionary+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Dictionary+Extensions.swift"; sourceTree = "<group>"; };
+		201BB3AB2209F76A008BA3D0 /* String+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extensions.swift"; sourceTree = "<group>"; };
+		201BFD8E21C3E9FD001E1DC1 /* HMActiveSentCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMActiveSentCommand.swift; sourceTree = "<group>"; };
+		202282B420D3AE8A0013356B /* RegisterCertificateCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RegisterCertificateCommandTests.swift; sourceTree = "<group>"; };
+		202282B820D3BEAD0013356B /* GetCertificateCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetCertificateCommandTests.swift; sourceTree = "<group>"; };
+		2024A90A2191EACD00E04169 /* HMLink.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLink.swift; sourceTree = "<group>"; };
+		2024FCD9218CA3B700D3EF20 /* HMLocalDevice.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLocalDevice.swift; sourceTree = "<group>"; };
+		2026631E220C4477003915F5 /* HMErrorCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMErrorCommandRequest.swift; sourceTree = "<group>"; };
+		20266320220C450F003915F5 /* HMErrorCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMErrorCommandResponse.swift; sourceTree = "<group>"; };
+		2029CDFE2361E24E009B3F19 /* HMTelematicsCommandError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsCommandError.swift; sourceTree = "<group>"; };
+		202D52DE22808CD400908EC6 /* HMSecureContainerCommandVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSecureContainerCommandVersion.swift; sourceTree = "<group>"; };
+		203A5CD3219073FD00D90D51 /* HMCharacteristic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMCharacteristic.swift; sourceTree = "<group>"; };
+		203A5CD52190751E00D90D51 /* HMBluetooth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBluetooth.swift; sourceTree = "<group>"; };
+		203A5CD721907E0D00D90D51 /* HMSerialType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSerialType.swift; sourceTree = "<group>"; };
+		203A5CD92190816400D90D51 /* HMLocalDeviceConfiguration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLocalDeviceConfiguration.swift; sourceTree = "<group>"; };
+		203A5CDD2190850D00D90D51 /* HMLocalDeviceState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLocalDeviceState.swift; sourceTree = "<group>"; };
+		203A5CDF21908D8700D90D51 /* HMBluetoothError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBluetoothError.swift; sourceTree = "<group>"; };
+		203A5CE321909CD200D90D51 /* HMPeripheralRetryValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPeripheralRetryValues.swift; sourceTree = "<group>"; };
+		2047F33B21BFEAC100B17F61 /* HMLinkDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLinkDelegate.swift; sourceTree = "<group>"; };
+		2047F33D21BFEDA600B17F61 /* HMLocalDeviceDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLocalDeviceDelegate.swift; sourceTree = "<group>"; };
+		204DBF9022887D78005C02D0 /* HMTelematicsCommandRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsCommandRequest.swift; sourceTree = "<group>"; };
+		204DBF9222887E0F005C02D0 /* HMTelematicsCommandResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsCommandResponse.swift; sourceTree = "<group>"; };
+		204DBF9422887E3C005C02D0 /* HMTelematicsNonceResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsNonceResponse.swift; sourceTree = "<group>"; };
+		204DBF9622887E58005C02D0 /* HMTelematicsNonceRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsNonceRequest.swift; sourceTree = "<group>"; };
+		205C530F22A54CDB002F71B1 /* HMTelematicsContainerVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsContainerVersion.swift; sourceTree = "<group>"; };
+		205C531122A54CF2002F71B1 /* HMTelematicsContainer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsContainer.swift; sourceTree = "<group>"; };
+		206C5B8120D24ECB00601727 /* AuthenticateCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateCommandTests.swift; sourceTree = "<group>"; };
+		206C5B8420D2626C00601727 /* AuthenticateDoneCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthenticateDoneCommandTests.swift; sourceTree = "<group>"; };
+		206C5B8620D2691600601727 /* NonceCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NonceCommandTests.swift; sourceTree = "<group>"; };
+		206C5B8820D26B6300601727 /* GetDeviceCertificateCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GetDeviceCertificateCommandTests.swift; sourceTree = "<group>"; };
+		206C5B8A20D2736F00601727 /* SecureContainerCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecureContainerCommandTests.swift; sourceTree = "<group>"; };
+		206C5B9020D2876000601727 /* RevokeCommandTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RevokeCommandTests.swift; sourceTree = "<group>"; };
+		2070E304221D89820050CE86 /* Date+Extensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Date+Extensions.swift"; sourceTree = "<group>"; };
+		207C6897239939DF00416594 /* HMContainerContentType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMContainerContentType.swift; sourceTree = "<group>"; };
+		207FE3CF218B2DB900D27D25 /* HMProtocolBytes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMProtocolBytes.swift; sourceTree = "<group>"; };
+		207FE3D1218B2ECD00D27D25 /* HMProtocolError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMProtocolError.swift; sourceTree = "<group>"; };
+		207FE3D3218B31E300D27D25 /* HMTimeouts.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTimeouts.swift; sourceTree = "<group>"; };
+		207FE3D5218B4A7100D27D25 /* HMParserDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMParserDelegate.swift; sourceTree = "<group>"; };
+		209A0B6D232FD3D8001C4DA9 /* XCFrameworkBuilder.sh */ = {isa = PBXFileReference; lastKnownFileType = text.script.sh; path = XCFrameworkBuilder.sh; sourceTree = "<group>"; };
+		20B570A32288906A00B91BF7 /* HMTelematicsAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsAPI.swift; sourceTree = "<group>"; };
+		20B570A52288908A00B91BF7 /* HMTelematicsResponse.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsResponse.swift; sourceTree = "<group>"; };
+		20B570A7228890A400B91BF7 /* HMTelematicsRequest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsRequest.swift; sourceTree = "<group>"; };
+		20C81A5221884D7E00964594 /* HMOAuth.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuth.swift; sourceTree = "<group>"; };
+		20CF26FA2289980800431727 /* HMTelematicsCommandStatus.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsCommandStatus.swift; sourceTree = "<group>"; };
+		20CF26FC2289BCC000431727 /* HMOAuthFailure.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuthFailure.swift; sourceTree = "<group>"; };
+		20CF26FE2289BCD600431727 /* HMOAuthSuccess.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuthSuccess.swift; sourceTree = "<group>"; };
+		20CF27002289BCF600431727 /* HMOAuthGrantType.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuthGrantType.swift; sourceTree = "<group>"; };
+		20CF27022289BD0C00431727 /* HMOAuthRequiredValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuthRequiredValues.swift; sourceTree = "<group>"; };
+		20CF27042289BD1E00431727 /* HMOAuthOptionalValues.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMOAuthOptionalValues.swift; sourceTree = "<group>"; };
+		20E888C8221DBDC2004D11EF /* MyPlayground.playground */ = {isa = PBXFileReference; lastKnownFileType = file.playground; path = MyPlayground.playground; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.swift; };
+		20FDEA3920BFEE7C001480A7 /* AccessCertificateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccessCertificateTests.swift; sourceTree = "<group>"; };
+		20FDEA3B20C0120A001480A7 /* DeviceCertificateTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DeviceCertificateTests.swift; sourceTree = "<group>"; };
+		"HMKit::HMKit::Product" /* HMKit.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; path = HMKit.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		"HMKit::HMKitTests::Product" /* HMKitTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; path = HMKitTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		OBJ_11 /* HMAccessCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAccessCertificate.swift; sourceTree = "<group>"; };
+		OBJ_12 /* HMAccessCertificateVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMAccessCertificateVersion.swift; sourceTree = "<group>"; };
+		OBJ_14 /* HMDeviceCertificate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDeviceCertificate.swift; sourceTree = "<group>"; };
+		OBJ_15 /* HMDeviceCertificateVersion.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMDeviceCertificateVersion.swift; sourceTree = "<group>"; };
+		OBJ_17 /* HMBytesAndVersionCodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBytesAndVersionCodable.swift; sourceTree = "<group>"; };
+		OBJ_18 /* HMBytesGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMBytesGettable.swift; sourceTree = "<group>"; };
+		OBJ_19 /* HMSigned.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSigned.swift; sourceTree = "<group>"; };
+		OBJ_20 /* HMSimilar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSimilar.swift; sourceTree = "<group>"; };
+		OBJ_21 /* HMVersionVerifiable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMVersionVerifiable.swift; sourceTree = "<group>"; };
+		OBJ_22 /* HMValueGettable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMValueGettable.swift; sourceTree = "<group>"; };
+		OBJ_26 /* HMProtocolCommand.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMProtocolCommand.swift; sourceTree = "<group>"; };
+		OBJ_54 /* Int+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Int+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_56 /* UInt8+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UInt8+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_58 /* Collection+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Collection+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_59 /* URLRequest+Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "URLRequest+Extensions.swift"; sourceTree = "<group>"; };
+		OBJ_6 /* Package.swift */ = {isa = PBXFileReference; explicitFileType = sourcecode.swift; path = Package.swift; sourceTree = "<group>"; };
+		OBJ_65 /* HMLinkError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLinkError.swift; sourceTree = "<group>"; };
+		OBJ_66 /* HMLinkState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLinkState.swift; sourceTree = "<group>"; };
+		OBJ_70 /* HMLocalDeviceError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLocalDeviceError.swift; sourceTree = "<group>"; };
+		OBJ_73 /* HMService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMService.swift; sourceTree = "<group>"; };
+		OBJ_74 /* HMKeychainLayer.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMKeychainLayer.swift; sourceTree = "<group>"; };
+		OBJ_75 /* HMLoggingOptions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMLoggingOptions.swift; sourceTree = "<group>"; };
+		OBJ_76 /* HMParser.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMParser.swift; sourceTree = "<group>"; };
+		OBJ_77 /* HMPeriod.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMPeriod.swift; sourceTree = "<group>"; };
+		OBJ_79 /* HMSessionKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMSessionKey.swift; sourceTree = "<group>"; };
+		OBJ_80 /* HMStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMStorage.swift; sourceTree = "<group>"; };
+		OBJ_84 /* HMTelematics.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematics.swift; sourceTree = "<group>"; };
+		OBJ_85 /* HMTelematicsError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HMTelematicsError.swift; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		OBJ_148 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_149 /* HMKit.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_223 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 0;
+			files = (
+				206F958123C5FA3400D714AE /* HMUtilities in Frameworks */,
+				206F958723C5FBE200D714AE /* HMCryptoKit in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		201BB3822209E767008BA3D0 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				201BFD8E21C3E9FD001E1DC1 /* HMActiveSentCommand.swift */,
+				201BB37622087AA9008BA3D0 /* HMCommandError.swift */,
+				201BB37822087B40008BA3D0 /* HMCommandResponseFactory.swift */,
+				201BB3802209AB11008BA3D0 /* HMCommandRequestFactory.swift */,
+				201BB37C22087E70008BA3D0 /* HMVerifiableCommand.swift */,
+				201BB3832209E779008BA3D0 /* Requests */,
+				201BB3842209E781008BA3D0 /* Responses */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		201BB3832209E779008BA3D0 /* Requests */ = {
+			isa = PBXGroup;
+			children = (
+				201BB37E2209A858008BA3D0 /* HMCommandRequest.swift */,
+				201BB3852209E7F1008BA3D0 /* HMAuthenticateCommandRequest.swift */,
+				201BB3892209E908008BA3D0 /* HMAuthenticateDoneCommandRequest.swift */,
+				201BB38F2209EA78008BA3D0 /* HMGetAccessCertificateCommandRequest.swift */,
+				201BB3932209EB2A008BA3D0 /* HMGetDeviceCertificateCommandRequest.swift */,
+				201BB3972209EBB7008BA3D0 /* HMGetNonceCommandRequest.swift */,
+				201BB39B2209EC1D008BA3D0 /* HMRegisterCertificateCommandRequest.swift */,
+				201BB39F2209EC95008BA3D0 /* HMRevokeCommandRequest.swift */,
+				201BB3A32209ED10008BA3D0 /* HMSecureContainerCommandRequest.swift */,
+				2026631E220C4477003915F5 /* HMErrorCommandRequest.swift */,
+			);
+			path = Requests;
+			sourceTree = "<group>";
+		};
+		201BB3842209E781008BA3D0 /* Responses */ = {
+			isa = PBXGroup;
+			children = (
+				201BB37A22087BBC008BA3D0 /* HMCommandResponse.swift */,
+				201BB3872209E890008BA3D0 /* HMAuthenticateCommandResponse.swift */,
+				201BB38B2209E95D008BA3D0 /* HMAuthenticateDoneCommandResponse.swift */,
+				201BB3912209EABD008BA3D0 /* HMGetAccessCertificateCommandResponse.swift */,
+				201BB3952209EB7F008BA3D0 /* HMGetDeviceCertificateCommandResponse.swift */,
+				201BB3992209EBE8008BA3D0 /* HMGetNonceCommandResponse.swift */,
+				201BB39D2209EC44008BA3D0 /* HMRegisterCertificateCommandResponse.swift */,
+				201BB3A12209ECD8008BA3D0 /* HMRevokeCommandResponse.swift */,
+				201BB3A52209ED5E008BA3D0 /* HMSecureContainerCommandResponse.swift */,
+				20266320220C450F003915F5 /* HMErrorCommandResponse.swift */,
+			);
+			path = Responses;
+			sourceTree = "<group>";
+		};
+		203A5CCD21906D6C00D90D51 /* Enums */ = {
+			isa = PBXGroup;
+			children = (
+				203A5CDF21908D8700D90D51 /* HMBluetoothError.swift */,
+				201BB37422084C07008BA3D0 /* HMCommandResponseType.swift */,
+				207C6897239939DF00416594 /* HMContainerContentType.swift */,
+				OBJ_70 /* HMLocalDeviceError.swift */,
+				203A5CDD2190850D00D90D51 /* HMLocalDeviceState.swift */,
+				OBJ_65 /* HMLinkError.swift */,
+				OBJ_66 /* HMLinkState.swift */,
+				207FE3CF218B2DB900D27D25 /* HMProtocolBytes.swift */,
+				OBJ_26 /* HMProtocolCommand.swift */,
+				207FE3D1218B2ECD00D27D25 /* HMProtocolError.swift */,
+				202D52DE22808CD400908EC6 /* HMSecureContainerCommandVersion.swift */,
+				203A5CD721907E0D00D90D51 /* HMSerialType.swift */,
+				207FE3D3218B31E300D27D25 /* HMTimeouts.swift */,
+			);
+			path = Enums;
+			sourceTree = "<group>";
+		};
+		206C5B8020D24EAE00601727 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				20FDEA3920BFEE7C001480A7 /* AccessCertificateTests.swift */,
+				20FDEA3B20C0120A001480A7 /* DeviceCertificateTests.swift */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		206C5B8320D2625100601727 /* Commands */ = {
+			isa = PBXGroup;
+			children = (
+				206C5B8120D24ECB00601727 /* AuthenticateCommandTests.swift */,
+				206C5B8420D2626C00601727 /* AuthenticateDoneCommandTests.swift */,
+				202282B820D3BEAD0013356B /* GetCertificateCommandTests.swift */,
+				206C5B8820D26B6300601727 /* GetDeviceCertificateCommandTests.swift */,
+				206C5B8620D2691600601727 /* NonceCommandTests.swift */,
+				202282B420D3AE8A0013356B /* RegisterCertificateCommandTests.swift */,
+				206C5B9020D2876000601727 /* RevokeCommandTests.swift */,
+				206C5B8A20D2736F00601727 /* SecureContainerCommandTests.swift */,
+			);
+			path = Commands;
+			sourceTree = "<group>";
+		};
+		2070E306221D89AD0050CE86 /* Bluetooth */ = {
+			isa = PBXGroup;
+			children = (
+				203A5CD52190751E00D90D51 /* HMBluetooth.swift */,
+				203A5CD3219073FD00D90D51 /* HMCharacteristic.swift */,
+				203A5CE321909CD200D90D51 /* HMPeripheralRetryValues.swift */,
+				OBJ_73 /* HMService.swift */,
+			);
+			path = Bluetooth;
+			sourceTree = "<group>";
+		};
+		2070E307221D8A5A0050CE86 /* Others */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_74 /* HMKeychainLayer.swift */,
+				OBJ_75 /* HMLoggingOptions.swift */,
+				OBJ_77 /* HMPeriod.swift */,
+				OBJ_79 /* HMSessionKey.swift */,
+				OBJ_80 /* HMStorage.swift */,
+			);
+			path = Others;
+			sourceTree = "<group>";
+		};
+		209A0B6C232FD3D8001C4DA9 /* Scripts */ = {
+			isa = PBXGroup;
+			children = (
+				209A0B6D232FD3D8001C4DA9 /* XCFrameworkBuilder.sh */,
+			);
+			path = Scripts;
+			sourceTree = "<group>";
+		};
+		20A6D787228AB58200AA89F8 /* Requests-Responses */ = {
+			isa = PBXGroup;
+			children = (
+				201951D022859BB4004D144A /* HMTelematicsAccessCertificateResponse.swift */,
+				201951CE22859B1B004D144A /* HMTelematicsAccessCertificateRequest.swift */,
+				204DBF9222887E0F005C02D0 /* HMTelematicsCommandResponse.swift */,
+				204DBF9022887D78005C02D0 /* HMTelematicsCommandRequest.swift */,
+				204DBF9422887E3C005C02D0 /* HMTelematicsNonceResponse.swift */,
+				204DBF9622887E58005C02D0 /* HMTelematicsNonceRequest.swift */,
+				20B570A52288908A00B91BF7 /* HMTelematicsResponse.swift */,
+				20B570A7228890A400B91BF7 /* HMTelematicsRequest.swift */,
+			);
+			path = "Requests-Responses";
+			sourceTree = "<group>";
+		};
+		20C81A542188812E00964594 /* OAuth */ = {
+			isa = PBXGroup;
+			children = (
+				20C81A5221884D7E00964594 /* HMOAuth.swift */,
+				20CF26FC2289BCC000431727 /* HMOAuthFailure.swift */,
+				20CF27002289BCF600431727 /* HMOAuthGrantType.swift */,
+				20CF27042289BD1E00431727 /* HMOAuthOptionalValues.swift */,
+				20CF27022289BD0C00431727 /* HMOAuthRequiredValues.swift */,
+				20CF26FE2289BCD600431727 /* HMOAuthSuccess.swift */,
+			);
+			path = OAuth;
+			sourceTree = "<group>";
+		};
+		OBJ_112 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				"HMKit::HMKitTests::Product" /* HMKitTests.xctest */,
+				"HMKit::HMKit::Product" /* HMKit.framework */,
+			);
+			name = Products;
+			sourceTree = BUILT_PRODUCTS_DIR;
+		};
+		OBJ_16 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_17 /* HMBytesAndVersionCodable.swift */,
+				OBJ_18 /* HMBytesGettable.swift */,
+				OBJ_19 /* HMSigned.swift */,
+				OBJ_20 /* HMSimilar.swift */,
+				OBJ_21 /* HMVersionVerifiable.swift */,
+				OBJ_22 /* HMValueGettable.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		OBJ_5 = {
+			isa = PBXGroup;
+			children = (
+				OBJ_6 /* Package.swift */,
+				20E888C8221DBDC2004D11EF /* MyPlayground.playground */,
+				209A0B6C232FD3D8001C4DA9 /* Scripts */,
+				OBJ_7 /* Sources */,
+				OBJ_90 /* Tests */,
+				OBJ_112 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		OBJ_51 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_58 /* Collection+Extensions.swift */,
+				201BB3A72209F748008BA3D0 /* Data+Extensions.swift */,
+				2070E304221D89820050CE86 /* Date+Extensions.swift */,
+				201BB3A92209F75A008BA3D0 /* Dictionary+Extensions.swift */,
+				OBJ_54 /* Int+Extensions.swift */,
+				201BB3AB2209F76A008BA3D0 /* String+Extensions.swift */,
+				OBJ_56 /* UInt8+Extensions.swift */,
+				OBJ_59 /* URLRequest+Extensions.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		OBJ_7 /* Sources */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_8 /* HMKit */,
+			);
+			name = Sources;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_8 /* HMKit */ = {
+			isa = PBXGroup;
+			children = (
+				2024FCD9218CA3B700D3EF20 /* HMLocalDevice.swift */,
+				203A5CD92190816400D90D51 /* HMLocalDeviceConfiguration.swift */,
+				2047F33D21BFEDA600B17F61 /* HMLocalDeviceDelegate.swift */,
+				2024A90A2191EACD00E04169 /* HMLink.swift */,
+				2047F33B21BFEAC100B17F61 /* HMLinkDelegate.swift */,
+				OBJ_76 /* HMParser.swift */,
+				207FE3D5218B4A7100D27D25 /* HMParserDelegate.swift */,
+				2070E306221D89AD0050CE86 /* Bluetooth */,
+				OBJ_9 /* Certificates */,
+				201BB3822209E767008BA3D0 /* Commands */,
+				203A5CCD21906D6C00D90D51 /* Enums */,
+				OBJ_51 /* Extensions */,
+				20C81A542188812E00964594 /* OAuth */,
+				2070E307221D8A5A0050CE86 /* Others */,
+				OBJ_81 /* Telematics */,
+			);
+			name = HMKit;
+			path = Sources/HMKit;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_81 /* Telematics */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_84 /* HMTelematics.swift */,
+				20B570A32288906A00B91BF7 /* HMTelematicsAPI.swift */,
+				20CF26FA2289980800431727 /* HMTelematicsCommandStatus.swift */,
+				205C531122A54CF2002F71B1 /* HMTelematicsContainer.swift */,
+				205C530F22A54CDB002F71B1 /* HMTelematicsContainerVersion.swift */,
+				OBJ_85 /* HMTelematicsError.swift */,
+				2029CDFE2361E24E009B3F19 /* HMTelematicsCommandError.swift */,
+				201951CC22859A49004D144A /* HMTelematicsRequestError.swift */,
+				20A6D787228AB58200AA89F8 /* Requests-Responses */,
+			);
+			path = Telematics;
+			sourceTree = "<group>";
+		};
+		OBJ_9 /* Certificates */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_11 /* HMAccessCertificate.swift */,
+				OBJ_12 /* HMAccessCertificateVersion.swift */,
+				OBJ_14 /* HMDeviceCertificate.swift */,
+				OBJ_15 /* HMDeviceCertificateVersion.swift */,
+				OBJ_16 /* Protocols */,
+			);
+			path = Certificates;
+			sourceTree = "<group>";
+		};
+		OBJ_90 /* Tests */ = {
+			isa = PBXGroup;
+			children = (
+				OBJ_91 /* HMKitTests */,
+			);
+			name = Tests;
+			sourceTree = SOURCE_ROOT;
+		};
+		OBJ_91 /* HMKitTests */ = {
+			isa = PBXGroup;
+			children = (
+				206C5B8020D24EAE00601727 /* Certificates */,
+				206C5B8320D2625100601727 /* Commands */,
+			);
+			name = HMKitTests;
+			path = Tests/HMKitTests;
+			sourceTree = SOURCE_ROOT;
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		"HMKit::HMKit" /* HMKit */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_153 /* Build configuration list for PBXNativeTarget "HMKit" */;
+			buildPhases = (
+				OBJ_156 /* Sources */,
+				OBJ_223 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = HMKit;
+			packageProductDependencies = (
+				206F958023C5FA3400D714AE /* HMUtilities */,
+				206F958623C5FBE200D714AE /* HMCryptoKit */,
+			);
+			productName = HMKit;
+			productReference = "HMKit::HMKit::Product" /* HMKit.framework */;
+			productType = "com.apple.product-type.framework";
+		};
+		"HMKit::HMKitTests" /* HMKitTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = OBJ_143 /* Build configuration list for PBXNativeTarget "HMKitTests" */;
+			buildPhases = (
+				OBJ_146 /* Sources */,
+				OBJ_148 /* Frameworks */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				OBJ_151 /* PBXTargetDependency */,
+			);
+			name = HMKitTests;
+			productName = HMKitTests;
+			productReference = "HMKit::HMKitTests::Product" /* HMKitTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		OBJ_1 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				CLASSPREFIX = HM;
+				LastUpgradeCheck = 1020;
+				ORGANIZATIONNAME = "High Mobility GmbH";
+				TargetAttributes = {
+					"HMKit::HMKit" = {
+						LastSwiftMigration = 1020;
+					};
+					"HMKit::HMKitTests" = {
+						LastSwiftMigration = 1020;
+					};
+				};
+			};
+			buildConfigurationList = OBJ_2 /* Build configuration list for PBXProject "HMKit" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = OBJ_5;
+			packageReferences = (
+				206F957F23C5FA3400D714AE /* XCRemoteSwiftPackageReference "hmutilities-swift" */,
+				206F958523C5FBE200D714AE /* XCRemoteSwiftPackageReference "hmcryptokit-swift" */,
+			);
+			productRefGroup = OBJ_112 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				"HMKit::HMKitTests" /* HMKitTests */,
+				"HMKit::HMKit" /* HMKit */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		OBJ_146 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				2012350A23BF5A9F001EE01E /* AuthenticateDoneCommandTests.swift in Sources */,
+				2012350D23BF5A9F001EE01E /* NonceCommandTests.swift in Sources */,
+				2012350E23BF5A9F001EE01E /* RegisterCertificateCommandTests.swift in Sources */,
+				2012350923BF5A9F001EE01E /* AuthenticateCommandTests.swift in Sources */,
+				20380131224CDED5001A6F96 /* AccessCertificateTests.swift in Sources */,
+				2012351023BF5A9F001EE01E /* RevokeCommandTests.swift in Sources */,
+				2012350B23BF5A9F001EE01E /* GetCertificateCommandTests.swift in Sources */,
+				2012351123BF5A9F001EE01E /* SecureContainerCommandTests.swift in Sources */,
+				2012350C23BF5A9F001EE01E /* GetDeviceCertificateCommandTests.swift in Sources */,
+				2012350823BF5A8D001EE01E /* DeviceCertificateTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		OBJ_156 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 0;
+			files = (
+				OBJ_157 /* HMAccessCertificate.swift in Sources */,
+				20CF26FB2289980800431727 /* HMTelematicsCommandStatus.swift in Sources */,
+				OBJ_158 /* HMAccessCertificateVersion.swift in Sources */,
+				205C531222A54CF2002F71B1 /* HMTelematicsContainer.swift in Sources */,
+				OBJ_159 /* HMDeviceCertificate.swift in Sources */,
+				OBJ_160 /* HMDeviceCertificateVersion.swift in Sources */,
+				201BB37722087AA9008BA3D0 /* HMCommandError.swift in Sources */,
+				OBJ_161 /* HMBytesAndVersionCodable.swift in Sources */,
+				201BB3A42209ED10008BA3D0 /* HMSecureContainerCommandRequest.swift in Sources */,
+				OBJ_162 /* HMBytesGettable.swift in Sources */,
+				20CF27012289BCF600431727 /* HMOAuthGrantType.swift in Sources */,
+				OBJ_163 /* HMSigned.swift in Sources */,
+				20CF27052289BD1E00431727 /* HMOAuthOptionalValues.swift in Sources */,
+				OBJ_164 /* HMSimilar.swift in Sources */,
+				201BB37D22087E70008BA3D0 /* HMVerifiableCommand.swift in Sources */,
+				204DBF9522887E3C005C02D0 /* HMTelematicsNonceResponse.swift in Sources */,
+				201BB3AC2209F76A008BA3D0 /* String+Extensions.swift in Sources */,
+				20CF26FF2289BCD600431727 /* HMOAuthSuccess.swift in Sources */,
+				20B570A8228890A400B91BF7 /* HMTelematicsRequest.swift in Sources */,
+				205C531022A54CDB002F71B1 /* HMTelematicsContainerVersion.swift in Sources */,
+				201BB3A22209ECD8008BA3D0 /* HMRevokeCommandResponse.swift in Sources */,
+				OBJ_165 /* HMVersionVerifiable.swift in Sources */,
+				204DBF9722887E58005C02D0 /* HMTelematicsNonceRequest.swift in Sources */,
+				201BB3922209EABD008BA3D0 /* HMGetAccessCertificateCommandResponse.swift in Sources */,
+				201951CF22859B1B004D144A /* HMTelematicsAccessCertificateRequest.swift in Sources */,
+				203A5CDE2190850D00D90D51 /* HMLocalDeviceState.swift in Sources */,
+				OBJ_166 /* HMValueGettable.swift in Sources */,
+				207FE3D4218B31E300D27D25 /* HMTimeouts.swift in Sources */,
+				203A5CE421909CD200D90D51 /* HMPeripheralRetryValues.swift in Sources */,
+				204DBF9322887E0F005C02D0 /* HMTelematicsCommandResponse.swift in Sources */,
+				201951CD22859A49004D144A /* HMTelematicsRequestError.swift in Sources */,
+				201BB37522084C07008BA3D0 /* HMCommandResponseType.swift in Sources */,
+				207C6898239939DF00416594 /* HMContainerContentType.swift in Sources */,
+				203A5CD62190751E00D90D51 /* HMBluetooth.swift in Sources */,
+				OBJ_168 /* HMProtocolCommand.swift in Sources */,
+				207FE3D6218B4A7100D27D25 /* HMParserDelegate.swift in Sources */,
+				2047F33C21BFEAC100B17F61 /* HMLinkDelegate.swift in Sources */,
+				203A5CDA2190816400D90D51 /* HMLocalDeviceConfiguration.swift in Sources */,
+				2024A90B2191EACD00E04169 /* HMLink.swift in Sources */,
+				OBJ_193 /* Int+Extensions.swift in Sources */,
+				20B570A62288908A00B91BF7 /* HMTelematicsResponse.swift in Sources */,
+				207FE3D0218B2DB900D27D25 /* HMProtocolBytes.swift in Sources */,
+				2047F33E21BFEDA600B17F61 /* HMLocalDeviceDelegate.swift in Sources */,
+				OBJ_195 /* UInt8+Extensions.swift in Sources */,
+				OBJ_197 /* Collection+Extensions.swift in Sources */,
+				201BB39E2209EC44008BA3D0 /* HMRegisterCertificateCommandResponse.swift in Sources */,
+				201BB3982209EBB7008BA3D0 /* HMGetNonceCommandRequest.swift in Sources */,
+				201BB39C2209EC1D008BA3D0 /* HMRegisterCertificateCommandRequest.swift in Sources */,
+				OBJ_198 /* URLRequest+Extensions.swift in Sources */,
+				2024FCDA218CA3B700D3EF20 /* HMLocalDevice.swift in Sources */,
+				201BB38C2209E95D008BA3D0 /* HMAuthenticateDoneCommandResponse.swift in Sources */,
+				20C81A5321884D7E00964594 /* HMOAuth.swift in Sources */,
+				20CF26FD2289BCC000431727 /* HMOAuthFailure.swift in Sources */,
+				OBJ_203 /* HMLinkError.swift in Sources */,
+				201BB38A2209E908008BA3D0 /* HMAuthenticateDoneCommandRequest.swift in Sources */,
+				OBJ_204 /* HMLinkState.swift in Sources */,
+				203A5CD821907E0D00D90D51 /* HMSerialType.swift in Sources */,
+				201BB3882209E890008BA3D0 /* HMAuthenticateCommandResponse.swift in Sources */,
+				20266321220C450F003915F5 /* HMErrorCommandResponse.swift in Sources */,
+				OBJ_207 /* HMLocalDeviceError.swift in Sources */,
+				201BB3AA2209F75A008BA3D0 /* Dictionary+Extensions.swift in Sources */,
+				OBJ_209 /* HMService.swift in Sources */,
+				201BB3902209EA78008BA3D0 /* HMGetAccessCertificateCommandRequest.swift in Sources */,
+				20CF27032289BD0C00431727 /* HMOAuthRequiredValues.swift in Sources */,
+				203A5CE021908D8700D90D51 /* HMBluetoothError.swift in Sources */,
+				OBJ_210 /* HMKeychainLayer.swift in Sources */,
+				201BB3812209AB11008BA3D0 /* HMCommandRequestFactory.swift in Sources */,
+				OBJ_211 /* HMLoggingOptions.swift in Sources */,
+				201BB3A02209EC95008BA3D0 /* HMRevokeCommandRequest.swift in Sources */,
+				OBJ_212 /* HMParser.swift in Sources */,
+				201BFD8F21C3E9FD001E1DC1 /* HMActiveSentCommand.swift in Sources */,
+				202D52DF22808CD400908EC6 /* HMSecureContainerCommandVersion.swift in Sources */,
+				OBJ_213 /* HMPeriod.swift in Sources */,
+				20B570A42288906A00B91BF7 /* HMTelematicsAPI.swift in Sources */,
+				203A5CD4219073FD00D90D51 /* HMCharacteristic.swift in Sources */,
+				201BB3942209EB2A008BA3D0 /* HMGetDeviceCertificateCommandRequest.swift in Sources */,
+				OBJ_215 /* HMSessionKey.swift in Sources */,
+				201BB37922087B40008BA3D0 /* HMCommandResponseFactory.swift in Sources */,
+				OBJ_216 /* HMStorage.swift in Sources */,
+				201BB39A2209EBE8008BA3D0 /* HMGetNonceCommandResponse.swift in Sources */,
+				207FE3D2218B2ECD00D27D25 /* HMProtocolError.swift in Sources */,
+				2029CDFF2361E24E009B3F19 /* HMTelematicsCommandError.swift in Sources */,
+				201BB3962209EB7F008BA3D0 /* HMGetDeviceCertificateCommandResponse.swift in Sources */,
+				OBJ_219 /* HMTelematics.swift in Sources */,
+				OBJ_220 /* HMTelematicsError.swift in Sources */,
+				201BB37B22087BBC008BA3D0 /* HMCommandResponse.swift in Sources */,
+				201BB3A62209ED5E008BA3D0 /* HMSecureContainerCommandResponse.swift in Sources */,
+				201BB3862209E7F1008BA3D0 /* HMAuthenticateCommandRequest.swift in Sources */,
+				2070E305221D89820050CE86 /* Date+Extensions.swift in Sources */,
+				201951D122859BB4004D144A /* HMTelematicsAccessCertificateResponse.swift in Sources */,
+				201BB3A82209F748008BA3D0 /* Data+Extensions.swift in Sources */,
+				2026631F220C4477003915F5 /* HMErrorCommandRequest.swift in Sources */,
+				204DBF9122887D78005C02D0 /* HMTelematicsCommandRequest.swift in Sources */,
+				201BB37F2209A859008BA3D0 /* HMCommandRequest.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		OBJ_151 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = "HMKit::HMKit" /* HMKit */;
+			targetProxy = 202B42B92056F9D30037B5F5 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		OBJ_144 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = HMKit.xcodeproj/HMKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = HMKitTests;
+			};
+			name = Debug;
+		};
+		OBJ_145 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PLATFORM_DIR)/Developer/Library/Frameworks",
+				);
+				INFOPLIST_FILE = HMKit.xcodeproj/HMKitTests_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"@loader_path/../Frameworks",
+					"@loader_path/Frameworks",
+				);
+				SWIFT_VERSION = 5.0;
+				TARGET_NAME = HMKitTests;
+			};
+			name = Release;
+		};
+		OBJ_154 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = HMKit.xcodeproj/HMKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MARKETING_VERSION = 3.2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.high-mobility.hmkit";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		OBJ_155 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUILD_LIBRARY_FOR_DISTRIBUTION = YES;
+				CURRENT_PROJECT_VERSION = "$(MARKETING_VERSION)";
+				ENABLE_TESTABILITY = YES;
+				INFOPLIST_FILE = HMKit.xcodeproj/HMKit_Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(TOOLCHAIN_DIR)/usr/lib/swift/macosx";
+				MARKETING_VERSION = 3.2.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.high-mobility.hmkit";
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+		OBJ_3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_NS_ASSERTIONS = YES;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				ONLY_ACTIVE_ARCH = YES;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Debug;
+		};
+		OBJ_4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COMBINE_HIDPI_IMAGES = YES;
+				COPY_PHASE_STRIP = YES;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				DEFINES_MODULE = YES;
+				DYLIB_INSTALL_NAME_BASE = "@rpath";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = s;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.0;
+				MACOSX_DEPLOYMENT_TARGET = 10.10;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = iphoneos;
+				SUPPORTED_PLATFORMS = "iphonesimulator iphoneos";
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = SWIFT_PACKAGE;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				SWIFT_VERSION = 5.0;
+				TVOS_DEPLOYMENT_TARGET = 10.0;
+				USE_HEADERMAP = NO;
+				WATCHOS_DEPLOYMENT_TARGET = 3.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		OBJ_143 /* Build configuration list for PBXNativeTarget "HMKitTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_144 /* Debug */,
+				OBJ_145 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_153 /* Build configuration list for PBXNativeTarget "HMKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_154 /* Debug */,
+				OBJ_155 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+		OBJ_2 /* Build configuration list for PBXProject "HMKit" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				OBJ_3 /* Debug */,
+				OBJ_4 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Debug;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		206F957F23C5FA3400D714AE /* XCRemoteSwiftPackageReference "hmutilities-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:highmobility/hmutilities-swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.4.6;
+			};
+		};
+		206F958523C5FBE200D714AE /* XCRemoteSwiftPackageReference "hmcryptokit-swift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "git@github.com:highmobility/hmcryptokit-swift.git";
+			requirement = {
+				kind = upToNextMinorVersion;
+				minimumVersion = 1.2.15;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		206F958023C5FA3400D714AE /* HMUtilities */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 206F957F23C5FA3400D714AE /* XCRemoteSwiftPackageReference "hmutilities-swift" */;
+			productName = HMUtilities;
+		};
+		206F958623C5FBE200D714AE /* HMCryptoKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 206F958523C5FBE200D714AE /* XCRemoteSwiftPackageReference "hmcryptokit-swift" */;
+			productName = HMCryptoKit;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = OBJ_1 /* Project object */;
+}
