@@ -18,7 +18,7 @@ Table of contents
 
 ## Features
 
-**Simple**: The library is designed to give iOS developers simple access to High Mobility's systems, by handling all the communication protocols, authentication flows and others security related components.
+**Simple**: The library is designed to give iOS developers simple access to High Mobility's systems, by handling all the communication protocols, authentication flows and other security related components.
 
 **Secure**: The SDK is a part of a *Public Key Infrastructure* (PKI) system, that enables secure communications in an open medium. Example  of another PKI system would be the Estonian digital ID-card with it's authentication and signing capabilities.
 
