@@ -41,7 +41,7 @@ and built into an `.xcframework` using an accompaning script: [XCFrameworkBuilde
 Furthermore, when `.xcframework` is also not suitable, the library can be made into a *fat binary* (`.framework`) by running [UniversalBuildScript.sh](https://github.com/highmobility/hmkit-swift/tree/master/Scripts/UniversalBuildScript.sh). This combines both simulator and device slices into one binary, but requires the simulator slice to be removed *before* being able to upload to *App Store Connect* – for this there is a [AppStoreCompatible.sh](https://github.com/highmobility/hmkit-swift/tree/master/Scripts/AppStoreCompatible.sh) script included inside the created `.framework` folder.
 
 
-If **BLE** is used, the `NSBluetoothPeripheralUsageDescription` needs to be added to your app's `*.plist` with a description.
+> If **BLE** is used, the `NSBluetoothPeripheralUsageDescription` needs to be added to your app's `*.plist` with a description.
 
 ## Requirements
 
@@ -69,9 +69,11 @@ There are 3 sample apps available on Github.com to showcase different use-cases 
 
 We would love to accept your patches and contributions to this project. Before getting to work, please first discuss the changes that you wish to make with us via [GitHub Issues](https://github.com/highmobility/hmkit-swift/issues), [Spectrum](https://spectrum.chat/high-mobility/) or [Slack](https://slack.high-mobility.com/).
 
+To start developing HMKit, please run `git clone git@github.com:highmobility/hmkit-swift.git` and open the Xcode project (Xcode will handle the dependencies itself). Releases are done by tagged commits (as required by SPM, please read more [here](https://swift.org/getting-started/#using-the-package-manager) and [here](https://github.com/apple/swift-package-manager/tree/master/Documentation)).
+
 See more in [CONTRIBUTING.md](https://github.com/highmobility/hmkit-swift/tree/master/CONTRIBUTING.md)
 
 
 ## Licence
 
-This repository is using MIT licence. See more in [LICENCE](https://github.com/highmobility/hmkit-swift/tree/master/LICENCE)
+This repository is using MIT licence. See more in [LICENCE](https://github.com/highmobility/hmkit-swift/blob/master/LICENSE)
