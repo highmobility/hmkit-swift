@@ -133,6 +133,10 @@ public extension HMLocalDevice {
     func disconnect() {
         bluetooth.disconnect()
 
+        guard state != .bluetoothUnavailable else {
+            return
+        }
+
         // And update the state
         changeState(to: .idle)
     }
