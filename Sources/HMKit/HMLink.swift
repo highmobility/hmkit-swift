@@ -166,7 +166,7 @@ public extension HMLink {
 extension HMLink: Equatable {
 
     public static func ==(lhs: HMLink, rhs: HMLink) -> Bool {
-        return lhs.central == rhs.central
+        lhs.central == rhs.central
     }
 }
 
@@ -222,7 +222,7 @@ private extension HMLink {
 
 
     var authenticationNonce: HMSessionKey.Nonce? {
-        return sessionKey?.originalNonce
+        sessionKey?.originalNonce
     }
 
     var authenticatedSessionKey: HMSessionKey? {

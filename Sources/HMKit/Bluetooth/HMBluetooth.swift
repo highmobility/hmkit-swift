@@ -48,6 +48,9 @@ class HMBluetooth: NSObject {
     private var outgoingReadCharacteristic: CBMutableCharacteristic
     private var outgoingWriteCharacteristic: CBMutableCharacteristic
 
+    private var incomingReadData: Data? = nil
+    private var outgoingReadData: Data? = nil
+
     // Others //
     private var alivePingTimer: Timer?
     private var retryValues: HMPeripheralRetryValues?
@@ -58,7 +61,7 @@ class HMBluetooth: NSObject {
     // MARK: Type Methods
 
     static func cbUUID(from id: String) -> CBUUID {
-        return CBUUID(string: "713D01\(id)-503E-4C75-BA94-3148F18D941E")
+        CBUUID(string: "713D01\(id)-503E-4C75-BA94-3148F18D941E")
     }
 
 
@@ -72,7 +75,7 @@ class HMBluetooth: NSObject {
                                                 queue: DispatchQueue(label: "hmkit.peripheralManager", qos: .utility),
                                                 options:  [CBPeripheralManagerOptionShowPowerAlertKey : false])
 
-        // Init the service<
+        // Init the service
         service = CBMutableService(type: HMService.primary.cbUUID, primary: true)
 
         // Init the characteristics
@@ -101,6 +104,8 @@ class HMBluetooth: NSObject {
 }
 
 extension HMBluetooth: CBPeripheralManagerDelegate {
+
+    // MARK: CBPeripheralManagerDelegate
 
     func peripheralManagerDidUpdateState(_ peripheral: CBPeripheralManager) {
         if peripheral.state == .poweredOn {
@@ -184,11 +189,11 @@ extension HMBluetooth: CBPeripheralManagerDelegate {
         // Find out what characteristic the read was performed on
         switch request.characteristic {
         case incomingReadCharacteristic:
-            data = incomingReadCharacteristic.value
+            data = incomingReadData
             name = "incoming 📲"
 
         case outgoingReadCharacteristic:
-            data = outgoingReadCharacteristic.value
+            data = outgoingReadData
             name = "outgoing 📤"
 
         case aliveCharacteristic:
@@ -325,7 +330,7 @@ extension HMBluetooth {
     }
 
     var isAdvertising: Bool {
-        return peripheralManager.isAdvertising
+        peripheralManager.isAdvertising
     }
 
 
@@ -358,7 +363,6 @@ extension HMBluetooth {
                 let payload = [0x01].data
 
                 // Update the characteristic on ALL connected devices
-                self.aliveCharacteristic.value = payload
                 self.peripheralManager.updateValue(payload, for: self.aliveCharacteristic, onSubscribedCentrals: nil)
             }
 
@@ -410,15 +414,22 @@ extension HMBluetooth {
 
     func update(characteristic: HMCharacteristic, with bytes: [UInt8], for link: HMLink) {
         // TODO: Might want to wait for retry values, if they are waiting themselves
-        guard let cbCharacteristic = readCharacterisitic(for: characteristic) else {
-            return
-        }
 
+        let cbCharacteristic: CBMutableCharacteristic
         let formattedData = HMParser.protocolFormattedBytes(from: bytes).data
         let name = (characteristic == .incomingRead) ? "incoming 📲" : "outgoing 📤"
 
-        // Update the value
-        cbCharacteristic.value = formattedData
+        if characteristic == .incomingRead {
+            incomingReadData = formattedData
+            cbCharacteristic = incomingReadCharacteristic
+        }
+        else if characteristic == .outgoingRead {
+            outgoingReadData = formattedData
+            cbCharacteristic = outgoingReadCharacteristic
+        }
+        else {
+            return
+        }
 
         // Update the characteristic
         if peripheralManager.updateValue(formattedData, for: cbCharacteristic, onSubscribedCentrals: [link.central]) {
@@ -450,7 +461,7 @@ private extension HMBluetooth {
     }
 
 
-    // MARK: Methods
+    // MARK: Private Methods
 
     func changeState(to state: HMLocalDeviceState) {
         HMLocalDevice.shared.changeState(to: state)
@@ -498,19 +509,6 @@ private extension HMBluetooth {
         return links.first { $0.central == central }
     }
 
-    func readCharacterisitic(for characteristic: HMCharacteristic) -> CBMutableCharacteristic? {
-        switch characteristic {
-        case .outgoingRead:
-            return outgoingReadCharacteristic
-
-        case .incomingRead:
-            return incomingReadCharacteristic
-
-        default:
-            return nil
-        }
-    }
-
     func received(data: Data, on characteristic: HMCharacteristic, from central: CBCentral) {
         guard let link = link(for: central) else {
             return log("couldn't find an HMLink for received data",
@@ -529,6 +527,9 @@ private extension HMBluetooth {
     func wipeServices() {
         peripheralManager.removeAllServices()
         servicesAdded = false
+
+        incomingReadData = nil
+        outgoingReadData = nil
 
         // Wipe the characteristics (just in case...)
         aliveCharacteristic.value = nil

@@ -95,8 +95,8 @@ public class HMLocalDevice {
 
 public extension HMLocalDevice {
 
-    var links: [HMLink] {
-        return Array(bluetooth.links)
+    var links: Set<HMLink> {
+        bluetooth.links
     }
 
     /// `HMAccessCertificate`-s registered with the `HMLocalDevice`, read-only.
@@ -344,7 +344,7 @@ public extension HMLocalDevice {
 extension HMLocalDevice {
 
     var isEncryptionEnabled: Bool {
-        return configuration.isEncryptionEnabled
+        configuration.isEncryptionEnabled
     }
 
 
