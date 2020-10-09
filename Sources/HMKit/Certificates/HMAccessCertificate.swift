@@ -132,7 +132,7 @@ public class HMAccessCertificate: Codable {
         }
 
         // Everything seems to check out
-        var bytes: [UInt8]
+        var bytes: [UInt8] = []
 
         // Combine version-specific bytes
         switch version {
@@ -148,7 +148,12 @@ public class HMAccessCertificate: Codable {
                 return nil
             }
 
-            bytes = [versionValue] + issuer + providingSerial.bytes + gainingSerial.bytes + gainingPublicKey.bytes + dateBytes
+            bytes += [versionValue]
+            bytes += issuer
+            bytes += providingSerial.bytes
+            bytes += gainingSerial.bytes
+            bytes += gainingPublicKey.bytes
+            bytes += dateBytes
         }
 
         // Handle permissions
