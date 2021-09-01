@@ -31,7 +31,10 @@
 
 import HMCryptoKit
 import SafariServices
+
+#if !os(macOS)
 import UIKit
+#endif
 
 
 public typealias HMOAuthResult = Result<HMOAuthSuccess, HMOAuthFailure>
@@ -56,7 +59,9 @@ public class HMOAuth {
     public var animate: Bool = true
 
     private var handler: ((HMOAuthResult) -> Void)?
+    #if !os(macOS)
     private var safari: SFSafariViewController?
+    #endif
 
     private var nonce: [UInt8]?
 
@@ -74,7 +79,9 @@ public class HMOAuth {
     /// - Returns: `true` if the *url* is meant for `HMOAuth`.
     @discardableResult public func handleCallback(with url: URL) -> Bool {
         // Dismiss the Safari view
+        #if !os(macOS)
         safari?.dismiss(animated: animate, completion: nil)
+        #endif
 
         // Check if the URL is meant for us
         guard url.absoluteString.hasPrefix(redirectScheme) else {
@@ -118,6 +125,7 @@ public class HMOAuth {
         requestAccessToken(code: refreshToken, state: state, grantType: .refreshToken)
     }
 
+    #if !os(macOS)
     /// Start the OAuth flow with all the required values.
     ///
     /// If the *access token* is received successfully,
@@ -171,7 +179,42 @@ public class HMOAuth {
             handler(.failure(HMOAuthFailure(reason: .internalError, state: state)))
         }
     }
+    #endif
 
+    #if os(macOS)
+    public func launchAuthFlow(appID: String,
+                               authURI: String,
+                               clientID: String,
+                               redirectScheme: String,
+                               tokenURI: String,
+                               state: String? = nil,
+                               validity: HMPeriod? = nil,
+                               handler: @escaping (HMOAuthResult) -> Void) {
+        self.appID = appID
+        self.authURI = authURI
+        self.clientID = clientID
+        self.redirectScheme = redirectScheme
+        self.state = state
+        self.tokenURI = tokenURI
+        self.validity = validity
+        self.handler = handler
+
+        do {
+            _ = try oauthURL(authURI: authURI, state: state, validity: validity)
+
+            // TODO: do smth here
+        }
+        catch let failure as HMOAuthFailure {
+            handler(.failure(failure))
+        }
+        catch {
+            handler(.failure(HMOAuthFailure(reason: .internalError, state: state)))
+        }
+    }
+    #endif
+
+
+    #if !os(macOS)
     /// Alternative method to start the OAuth flow with all the required
     /// and optional values.
     ///
@@ -199,6 +242,22 @@ public class HMOAuth {
                        for: viewController,
                        handler: handler)
     }
+    #endif
+
+    #if os(macOS)
+    public func launchAuthFlow(requiredValues: HMOAuthRequiredValues,
+                               optionalValues: HMOAuthOptionalValues?,
+                               handler: @escaping (HMOAuthResult) -> Void) {
+        launchAuthFlow(appID: requiredValues.appID,
+                       authURI: requiredValues.authURI,
+                       clientID: requiredValues.clientID,
+                       redirectScheme: requiredValues.redirectScheme,
+                       tokenURI: requiredValues.tokenURI,
+                       state: optionalValues?.state,
+                       validity: optionalValues?.validity,
+                       handler: handler)
+    }
+    #endif
 
 
     // MARK: Init

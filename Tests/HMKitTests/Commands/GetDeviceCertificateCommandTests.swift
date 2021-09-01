@@ -88,7 +88,7 @@ class GetDeviceCertificateCommandTests: XCTestCase {
         let publicKeyBytes = "4A116CF85EF1B268D5E68777658BC77E9E5F3AA2BB2EDDBA2CDBD79AEBD63FECAFB15F9648DE82E5C60963EFC8FC9700E8B4B5E653505C1F22FA19169A7F1180".hexBytes
         let publicKey = try HMCryptoKit.publicKey(binary: publicKeyBytes)
 
-        guard let accessCert = HMAccessCertificate(base64Encoded: "AXRtY3M+tA2OgurYlqFtYUtv9v0ZOodKEWz4XvGyaNXmh3dli8d+nl86orsu3bos29ea69Y/7K+xX5ZI3oLlxglj78j8lwDotLXmU1BcHyL6GRaafxGAEgYGDiUXBgYOJRAQB//9/+//////AwAAAAAAJtWqesl5VY8jX8b7436KiyXXpSscxBxhxEHwucgPdMUpwoSrIsZRUOjU/UvJrGOo/JSMPopZF3nLCYOiSCX1NQ==") else {
+        guard let _ = HMAccessCertificate(base64Encoded: "AXRtY3M+tA2OgurYlqFtYUtv9v0ZOodKEWz4XvGyaNXmh3dli8d+nl86orsu3bos29ea69Y/7K+xX5ZI3oLlxglj78j8lwDotLXmU1BcHyL6GRaafxGAEgYGDiUXBgYOJRAQB//9/+//////AwAAAAAAJtWqesl5VY8jX8b7436KiyXXpSscxBxhxEHwucgPdMUpwoSrIsZRUOjU/UvJrGOo/JSMPopZF3nLCYOiSCX1NQ==") else {
             return XCTFail("Access certificate init")
         }
 
