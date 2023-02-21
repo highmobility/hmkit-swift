@@ -49,7 +49,7 @@ public class HMTelematics {
     }
 
     /// The URL base used in Telematics' and Access Certificate requests.
-    public static var urlBasePath = HMTelematicsAPI.Base.test.rawValue
+    public static var urlBasePath = HMTelematicsAPI.Base.sbox.rawValue
 
 
     // MARK: Methods
@@ -176,11 +176,14 @@ extension HMTelematics {
         // And match the name to known ones.
         guard let name = String(bytes: deviceCertificate.issuer, encoding: .utf8),
             let urlBase = HMTelematicsAPI.Base(rawValue: name) else {
-                return
+                return log("telematics",
+                           "update base path",
+                           "error #1: unable to update requests' base path from device certificate issuer",
+                           types: [.telematics, .error, .urlRequests])
         }
 
         // And set
-        urlBasePath = urlBase.rawValue
+        urlBasePath = urlBase.url
     }
 }
 

@@ -34,9 +34,18 @@ import Foundation
 enum HMTelematicsAPI {
 
     enum Base: String {
+        case xvhm
+        case sbox
 
-        case test = "https://sandbox.api.high-mobility.com"
-        case xvhm = "https://api.high-mobility.com"
+        @available(*, unavailable, renamed: "sbox")
+        case test
+
+        var url: String {
+            switch self {
+            case .xvhm:         return "https://api.high-mobility.com"
+            case .test, .sbox:  return "https://sandbox.api.high-mobility.com"
+            } 
+        }
     }
 
 
